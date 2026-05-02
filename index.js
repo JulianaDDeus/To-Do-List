@@ -22,6 +22,8 @@ function printItem(){
         const texto = document.createElement('p');
         const btnExcluir = document.createElement('button');
         const btnFeito = document.createElement('button');
+        const botoes = document.createElement('div');
+        botoes.className = 'botoes';
         btnFeito.textContent = 'Feito';
         btnFeito.onclick = () => marcarFeito(i);
         btnExcluir.textContent = 'Excluir';
@@ -36,10 +38,10 @@ function printItem(){
             novoItem.className = 'itemFeito';
         }
         texto.className = 'item';
-        novoItem.id = 'item' + i;
         novoItem.appendChild(texto);
-        novoItem.appendChild(btnExcluir);
-        novoItem.appendChild(btnFeito);
+        novoItem.appendChild(botoes);
+        botoes.appendChild(btnExcluir);
+        botoes.appendChild(btnFeito);
         container.appendChild(novoItem);
     }
 }
@@ -53,9 +55,14 @@ function excluirItem(x){
 
 function marcarFeito(x){
     const listas = JSON.parse(localStorage.getItem("listas")) || [];
-    listas[x].status = 'feito';
+    if(listas[x].status == 'pendente'){
+        listas[x].status = 'feito';
+    }else{
+        listas[x].status = 'pendente';
+    }
     localStorage.setItem("listas", JSON.stringify(listas));
     window.location.reload();
 }
 
 printItem();
+checkbox();

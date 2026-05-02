@@ -2,26 +2,50 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    background-image: url("./bgImg/bgRosaClaro.jpg");
+}
+header{
+    background-color: rgb(201, 27, 85);
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .title {
   font-family: "Fascinate", system-ui;
   font-weight: 400;
   font-style: normal;
+  margin: 10px;
+  color: rgb(255, 200, 243);
 }
 .subTitle{
   font-family: "Chewy", system-ui;
   font-weight: 400;
   font-style: normal;
+  color: rgb(201, 27, 85);
 }
 main{
-    border: 3px solid black;
+    border: 3px solid rgb(201, 27, 85);
+    background-color: rgb(255, 200, 243);
     border-radius: 10px;
     padding: 10px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 500px;
 }
-.item {
+input, button{
+    border: solid 3px rgb(201, 27, 85);
+    background-color: rgb(255, 200, 243);
+    color: rgb(201, 27, 85);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+}
+.item, button {
     font-family: "Cause", cursive;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -30,11 +54,15 @@ main{
 a{
     margin: 5px;
 }
-button{
-    margin: 5px;
+.botoes{
+    display: flex;
+    margin-left: auto;
 }
 .itemPar{
-    background-color: gray;
+    background-color: rgb(218, 75, 123);
+}
+.itemImpar{
+    background-color: rgb(255, 200, 243);
 }
 .itemFeito{
     background-color: lightgreen;
@@ -43,4 +71,5 @@ button{
     display: flex;
     flex-direction: row;
     padding: 10px;
+    width: 500px;
 }
