@@ -1,6 +1,7 @@
 $('#myModal').on('shown.bs.modal', function () {
     $('#myInput').trigger('focus');
 });
+
 function addItem() {
     const item = document.getElementById('inputItem').value;
     if(item == null || item.length == 0){
@@ -29,13 +30,17 @@ function printItem(){
         const btnExcluir = document.createElement('button');
         const btnFeito = document.createElement('button');
         const botoes = document.createElement('div');
+
         botoes.className = 'botoes';
+
         btnFeito.textContent = 'Feito';
         btnFeito.type = 'button'
         btnFeito.onclick = () => marcarFeito(i);
+
         btnExcluir.textContent = 'Excluir';
         btnExcluir.type = 'button';
         btnExcluir.onclick = () => excluirItem(i);
+        
         texto.textContent = listas[i].item;
         if(i % 2 == 0){
             novoItem.className = 'itemPar';

@@ -35,7 +35,7 @@ header {
     margin: 5px;
 }
 
-.item, button {
+p, button {
     font-family: "Cause", cursive;
     font-weight: 500;
 }
@@ -70,9 +70,8 @@ input, button, .btn {
     padding: 5px;
 }
 
-/* LINKS */
-a {
-    margin: 5px;
+button:hover, .btn:hover{
+    background-color: rgb(255, 150, 232);
 }
 
 /* LISTA */
