@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cause:wght@100..900&family=Chewy&family=Fascinate&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>To Do List</h1>
+        <h1 class="title">To Do List</h1>
     </header>
     <main>
-        <h3>Minhas Tarefas</h3>
-        <input type="text" placeholder="Novo Item" id="inputItem">
-        <button onclick="addItem()">+</button>
-        <ul id="lista"></ul>
+        <h3 class="subTitle">Minhas Tarefas</h3>
+        <div id="novoItem">
+            <input type="text" placeholder="Novo Item" id="inputItem" required>
+            <button onclick="addItem()">+</button>
+        </div>
+        <div id="lista"></div>
     </main>
     <script src="index.js"></script>
 </body>
